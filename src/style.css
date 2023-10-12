@@ -32,18 +32,10 @@ body {
 }
 
 .activeItem {
-    position: relative;
-    top: 4px;
-
-    border-right: 2px solid #bbb;
-    border-left: 2px solid #bbb;
-    border-bottom: 2px solid #bbb;
+    background-color: #999;
+    border: none;
 }
 
 .activeItem:last-child {
-    border-right: 2px solid #bbb;
-}
-
-.activeItem + .navItem {
-    border-left: none;
+    border-right: none;
 }
