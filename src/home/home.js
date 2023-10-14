@@ -10,7 +10,7 @@ let mainPageParagraphContent = "Here at Goldren Lion Restaurant, we've great foo
                             to your doorsteps.";
 
 
-const loadHomePage = function() {
+const loadHeroSection = function() {
     let homePageHeroSection = document.createElement("section");
     let mainPageHeading = document.createElement("h4");
     let restaurantImg = new Image();
@@ -43,10 +43,52 @@ const loadHomePage = function() {
     mainPageParagraph.textContent = mainPageParagraphContent;
     homePageHeroSection.appendChild(mainPageParagraph);
 
+    return homePageHeroSection;
+};
+
+const loadScheduleSection = function() {
+    let scheduleSection = document.createElement("section");
+    let openingTime = document.createElement("div");
+    let closingTime = document.createElement("div");
+
+    scheduleSection.setAttribute("id", "scheduleSection");
+    openingTime.setAttribute("id", "openingTime");
+    closingTime.setAttribute("id", "closingTime");
+
+    let openingTimeHeader = document.createElement("h5");
+    let openingTimeText = document.createElement("p");
+    openingTimeHeader.classList.add("scheduleHeader");
+    openingTimeText.classList.add("scheduleTime");
+    openingTimeHeader.textContent = "Opening Time";
+    openingTimeText.innerHTML = "8:00 AM (Monday - Friday)<br>";
+    openingTimeText.innerHTML += "7:00 AM (Saturday)";
+
+    openingTime.appendChild(openingTimeHeader);
+    openingTime.appendChild(openingTimeText);
+
+    let closingTimeHeader = document.createElement("h5");
+    let closingTimeText = document.createElement("p");
+    closingTimeHeader.classList.add("scheduleHeader");
+    closingTimeText.classList.add("scheduleTime");
+    closingTimeHeader.textContent = "Closing Time";
+    closingTimeText.innerHTML = "9:00 PM (Monday - Friday)<br>";
+    closingTimeText.innerHTML += "10:00 PM (Saturday)";
+
+    closingTime.appendChild(closingTimeHeader);
+    closingTime.appendChild(closingTimeText);
+
+    scheduleSection.appendChild(openingTime);
+    scheduleSection.appendChild(closingTime);
+  
+    return scheduleSection;
+};
+
+const loadHomePage = function() {
     return [
-        homePageHeroSection,
+        loadHeroSection(),
+        loadScheduleSection(),
     ];
-}
+};
 
 export {
     loadHomePage as default,
