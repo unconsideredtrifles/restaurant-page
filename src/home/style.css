@@ -1,13 +1,15 @@
 #homePage {
-    display: flex;
-    flex-direction: column;    
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 #heroHeadingWrapper {
-    margin-bottom: 3rem;
+    grid-area: 1 / 1 / 2 / 3;
+    margin-bottom: 5rem;
 
     font-size: 3rem;
+    text-align: center;
 }
 
 #heroHeading {
@@ -19,12 +21,18 @@
 }
 
 #heroImage {
-    width: 450px;
-    height: 337.469px;
-    margin-bottom: 2.5rem;
+    grid-area: 2 / 2 / span 1 / span 1;
+    width: 350px;
+    height: auto;
 }
 
 #heroParagraph {
-    max-width: 70ch;
-    line-height: 1.5;
+    grid-area: 2 / 1 / span 1 / span 1;
+    justify-self: end;
+
+    max-width: 43ch;
+    margin-top: 0.8rem;
+    margin-right: 2rem;
+
+    line-height: 2;
 }
