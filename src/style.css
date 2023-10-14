@@ -25,7 +25,7 @@ h4, p {
     text-decoration: none;
 
     border-left: 1px solid #bbb;
-    border-bottom: 1px solid #bbb;
+    border-bottom: none;
     padding: 0.8rem 2rem 0.6rem 2rem;
     color: #fff;
     background-color: inherit;
