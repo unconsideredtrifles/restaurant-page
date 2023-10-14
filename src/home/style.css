@@ -1,4 +1,19 @@
-#mainImage {
+#heroHeadingWrapper {
+    margin-bottom: 3rem;
+
+    font-size: 3rem;
+}
+
+#heroHeading {
+    margin: 0 0.5rem;
+}
+
+.heroHeadingIcon {
+    width: 2rem;
+}
+
+#heroImage {
     width: 450px;
     height: 337.469px;
+    margin-bottom: 2.5rem;
 }
