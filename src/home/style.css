@@ -25,5 +25,6 @@
 }
 
 #heroParagraph {
-    max-width: 70ch
+    max-width: 70ch;
+    line-height: 1.5;
 }
