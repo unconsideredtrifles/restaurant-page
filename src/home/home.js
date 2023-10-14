@@ -1,6 +1,7 @@
 import "./style.css";
 import restaurantImgSrc from "./restaurant.jpg";
 import headingIcon from "./hero-heading-icon.svg";
+import clockLogo from "./clock.png";
 
 let mainPageHeadingContent = "Golden Lion Restaurant";
 let mainPageParagraphContent = "Here at Goldren Lion Restaurant, we've great food, good atmosphere and \
@@ -48,12 +49,18 @@ const loadHeroSection = function() {
 
 const loadScheduleSection = function() {
     let scheduleSection = document.createElement("section");
+    let clockImg = new Image();
     let openingTime = document.createElement("div");
     let closingTime = document.createElement("div");
 
     scheduleSection.setAttribute("id", "scheduleSection");
     openingTime.setAttribute("id", "openingTime");
     closingTime.setAttribute("id", "closingTime");
+
+    clockImg.src = clockLogo;
+    clockImg.width = "150";
+    clockImg.setAttribute("id", "clockLogo");
+    scheduleSection.appendChild(clockImg);
 
     let openingTimeHeader = document.createElement("h5");
     let openingTimeText = document.createElement("p");
