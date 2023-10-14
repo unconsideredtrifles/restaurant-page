@@ -39,6 +39,7 @@ const loadHomePage = function() {
     restaurantImg.setAttribute("id", "heroImage");
     homePageHeroSection.appendChild(restaurantImg);
 
+    mainPageParagraph.setAttribute("id", "heroParagraph")
     mainPageParagraph.textContent = mainPageParagraphContent;
     homePageHeroSection.appendChild(mainPageParagraph);
 

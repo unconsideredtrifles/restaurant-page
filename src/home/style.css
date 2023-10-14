@@ -23,3 +23,7 @@
     height: 337.469px;
     margin-bottom: 2.5rem;
 }
+
+#heroParagraph {
+    max-width: 70ch
+}
