@@ -11,10 +11,12 @@ let mainPageParagraphContent = "Here at Goldren Lion Restaurant, we've great foo
 
 
 const loadHomePage = function() {
+    let homePageHeroSection = document.createElement("section");
     let mainPageHeading = document.createElement("h4");
     let restaurantImg = new Image();
     let mainPageParagraph = document.createElement("p");
 
+    homePageHeroSection.setAttribute("id", "homePage");
     mainPageHeading.setAttribute("id", "heroHeadingWrapper");
 
     let headingIconImg1 = new Image();
@@ -31,16 +33,17 @@ const loadHomePage = function() {
     mainPageHeading.appendChild(headingIconImg1);
     mainPageHeading.appendChild(mainPageHeadingText);
     mainPageHeading.appendChild(headingIconImg2);
+    homePageHeroSection.appendChild(mainPageHeading);
 
     restaurantImg.src = restaurantImgSrc;
     restaurantImg.setAttribute("id", "heroImage");
+    homePageHeroSection.appendChild(restaurantImg);
 
     mainPageParagraph.textContent = mainPageParagraphContent;
+    homePageHeroSection.appendChild(mainPageParagraph);
 
     return [
-        mainPageHeading,
-        restaurantImg,
-        mainPageParagraph,
+        homePageHeroSection,
     ];
 }
 
