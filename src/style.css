@@ -9,6 +9,8 @@ h4, p {
 
 #navBar {
     margin-bottom: 2.5rem;
+    position: sticky;
+    top: 0;
 }
 
 #navWrapper {
