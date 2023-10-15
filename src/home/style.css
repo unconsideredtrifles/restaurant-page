@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
+    margin-bottom: 5rem;
 }
 
 #heroHeadingWrapper {
@@ -35,4 +36,30 @@
     margin-right: 2rem;
 
     line-height: 2;
+}
+
+#scheduleSection {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0 3rem 20rem;
+
+    color: #fff;
+    background-color: #515151;
+    
+    position: relative;
+}
+
+#clockLogo {
+    position: absolute;
+    top: -3rem;
+    left: 12rem;
+}
+
+.scheduleHeader {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.scheduleTime {
+    line-height: 1.5;
 }
