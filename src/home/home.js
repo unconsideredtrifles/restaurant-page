@@ -5,14 +5,17 @@ import clockLogo from "./clock.png";
 
 import potBeefStewImg from "../food-menu/food-images/pot_beef_stew.jpeg";
 import biBimBapImg from "../food-menu/food-images/bibimbap.jpeg";
-import butternutSquashImg from "../food-menu/food-images/butternut_squash_fritters.jpeg";
+import butternutSquashImg from 
+"../food-menu/food-images/butternut_squash_fritters.jpeg";
 
 let mainPageHeadingContent = "Golden Lion Restaurant";
-let mainPageParagraphContent = "Here at Goldren Lion Restaurant, we've great food, good atmosphere and \
-                            excellent service. Come stop by us to experience authentic cuisines and \
-                            dishes prepared by our top chefs for resonable prices. We also have a fast \
-                            and punctual delivery service that can bring the food hot and fresh right  \
-                            to your doorsteps.";
+let mainPageParagraphContent = "Here at Goldren Lion Restaurant, we've great \
+                                food, good atmosphere excellent service. Come \
+                                stop by us to experience authentic cuisines \
+                                and dishes prepared by our top chefs for \
+                                reasonable prices. We also have a fast and \
+                                punctual delivery service that can bring the \
+                                food hot and fresh right to your doorsteps.";
 
 
 const loadHeroSection = function() {
