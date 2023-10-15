@@ -3,6 +3,10 @@ import restaurantImgSrc from "./restaurant.jpg";
 import headingIcon from "./hero-heading-icon.svg";
 import clockLogo from "./clock.png";
 
+import potBeefStewImg from "../food-menu/food-images/pot_beef_stew.jpeg";
+import biBimBapImg from "../food-menu/food-images/bibimbap.jpeg";
+import butternutSquashImg from "../food-menu/food-images/butternut_squash_fritters.jpeg";
+
 let mainPageHeadingContent = "Golden Lion Restaurant";
 let mainPageParagraphContent = "Here at Goldren Lion Restaurant, we've great food, good atmosphere and \
                             excellent service. Come stop by us to experience authentic cuisines and \
@@ -86,14 +90,98 @@ const loadScheduleSection = function() {
 
     scheduleSection.appendChild(openingTime);
     scheduleSection.appendChild(closingTime);
-  
+
     return scheduleSection;
+};
+
+const loadPopularMenu = function() {
+    let menuSection = document.createElement("section");
+    let menuHeading = document.createElement("h4");
+    let allMenu = document.createElement("div");
+
+    menuSection.setAttribute("id", "popularMenuSection");
+
+    menuHeading.setAttribute("id", "popularMenuHeading");
+    menuHeading.textContent = "Popular Menu";
+    menuSection.appendChild(menuHeading);
+
+    allMenu.setAttribute("id", "popularMenus");
+
+    let menu1 = document.createElement("article");
+    let menu2 = document.createElement("article");
+    let menu3 = document.createElement("article");
+
+    menu1.classList.add("popularMenu");
+    menu2.classList.add("popularMenu");
+    menu3.classList.add("popularMenu");
+
+    let menuImg1 = new Image();
+    let menuImg2 = new Image();
+    let menuImg3 = new Image();
+
+    menuImg1.src = potBeefStewImg;
+    menuImg2.src = biBimBapImg;
+    menuImg3.src = butternutSquashImg;
+    menuImg1.classList.add("popularMenuImg");
+    menuImg2.classList.add("popularMenuImg");
+    menuImg3.classList.add("popularMenuImg");
+    menu1.appendChild(menuImg1);
+    menu2.appendChild(menuImg2);
+    menu3.appendChild(menuImg3);
+
+    let menuDescription1 = document.createElement("div");
+    let menuDescription2 = document.createElement("div");
+    let menuDescription3 = document.createElement("div");
+    menuDescription1.classList.add("popularMenuDescription");
+    menuDescription2.classList.add("popularMenuDescription");
+    menuDescription3.classList.add("popularMenuDescription");
+
+    let price1 = document.createElement("span");
+    let price2 = document.createElement("span");
+    let price3 = document.createElement("span");
+
+    price1.classList.add("popularMenuPrice");
+    price2.classList.add("popularMenuPrice");
+    price3.classList.add("popularMenuPrice");
+    price1.textContent = "$10.33"
+    price2.textContent = "$8.9"
+    price3.textContent = "$9.5"
+    menuDescription1.appendChild(price1);
+    menuDescription2.appendChild(price2);
+    menuDescription3.appendChild(price3);
+
+    let menuName1 = document.createElement("h5");
+    let menuName2 = document.createElement("h5");
+    let menuName3 = document.createElement("h5");
+
+    menuName1.classList.add("popularMenuName");
+    menuName2.classList.add("popularMenuName");
+    menuName3.classList.add("popularMenuName");
+
+    menuName1.textContent = "Instant Pot Beef Stew";
+    menuName2.textContent = "Bibimbap";
+    menuName3.textContent = "Butternut Squash Fritter";
+    menuDescription1.appendChild(menuName1);
+    menuDescription2.appendChild(menuName2);
+    menuDescription3.appendChild(menuName3);
+
+    menu1.appendChild(menuDescription1);
+    menu2.appendChild(menuDescription2);
+    menu3.appendChild(menuDescription3);
+
+    allMenu.appendChild(menu1);
+    allMenu.appendChild(menu2);
+    allMenu.appendChild(menu3);
+
+    menuSection.appendChild(allMenu);
+    return menuSection;
 };
 
 const loadHomePage = function() {
     return [
         loadHeroSection(),
         loadScheduleSection(),
+        loadPopularMenu(),
     ];
 };
 
