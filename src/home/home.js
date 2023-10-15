@@ -58,7 +58,7 @@ const loadScheduleSection = function() {
     closingTime.setAttribute("id", "closingTime");
 
     clockImg.src = clockLogo;
-    clockImg.width = "150";
+    clockImg.width = "140";
     clockImg.setAttribute("id", "clockLogo");
     scheduleSection.appendChild(clockImg);
 
