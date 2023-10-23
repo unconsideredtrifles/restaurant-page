@@ -180,11 +180,137 @@ const loadPopularMenu = function() {
     return menuSection;
 };
 
+const loadContactSection = function() {
+    let contactSection = document.createElement("section");
+    contactSection.setAttribute("id", "contactSection");
+
+    let contactInfo = document.createElement("div");
+    let contactHeading = document.createElement("h4");
+    let contactEmail = document.createElement("address");
+    let emailLink  = document.createElement("a");
+    let emailAddress = "goatedwiththesauce@goldenlion.org"
+    let contactPhone = document.createElement("address");
+    let phNoLink = document.createElement("a");
+    let phNo = "+0019786942";
+
+    contactHeading.setAttribute("id", "contactHeading");
+    contactHeading.textContent = "Contact us"
+
+    contactEmail.classList.add("contactAddress");
+    contactEmail.textContent = "Email : ";
+    emailLink.classList.add("contactLinks");
+    emailLink.setAttribute("href", `mailto:${emailAddress}`);
+    emailLink.textContent = emailAddress
+    contactEmail.appendChild(emailLink);
+
+    contactPhone.classList.add("contactAddress");
+    contactPhone.textContent = "Phone (for delivery orders) : "
+    phNoLink.classList.add("contactLinks");
+    phNoLink.setAttribute("href", `tel:${phNo}`);
+    phNoLink.textContent = phNo;
+    contactPhone.appendChild(phNoLink);
+
+    contactInfo.setAttribute("id", "contactInfoSection");
+    contactInfo.appendChild(contactHeading);
+    contactInfo.appendChild(contactEmail);
+    contactInfo.appendChild(contactPhone);
+    contactSection.appendChild(contactInfo);
+
+    let feedbackFormWrapper = document.createElement("div");
+    let feedbackFormFrame = document.createElement("fieldset");
+    let feedbackFormHeading = document.createElement("legend");
+    let feedbackForm = document.createElement("form");
+
+    feedbackFormWrapper.setAttribute("id", "contactFeedbackSection");
+    feedbackFormHeading.setAttribute("id", "feedbackFormHeading");
+    feedbackFormHeading.textContent = "Feedback Form";
+    feedbackFormFrame.appendChild(feedbackFormHeading);
+
+    let firstNameFormGroup = document.createElement("div");
+    let firstNameLabel = document.createElement("label")
+    let firstNameForm = document.createElement("input");
+    let firstNameFormBar = document.createElement("span");
+
+    firstNameFormGroup.classList.add("formGroup");
+
+    firstNameForm.classList.add("feedbackFormField");
+    firstNameForm.setAttribute("required", "");
+    firstNameForm.setAttribute("type", "text");
+    firstNameForm.setAttribute("id", "feedbackSenderFirstName");
+
+    firstNameLabel.classList.add("feedbackFormLabel");
+    firstNameLabel.setAttribute("for", "feedbackSenderFirstName");
+    firstNameLabel.textContent = "First Name";
+
+    firstNameFormBar.classList.add("formBar");
+    firstNameFormGroup.appendChild(firstNameForm);
+    firstNameFormGroup.appendChild(firstNameLabel);
+    firstNameFormGroup.appendChild(firstNameFormBar);
+
+    let lastNameFormGroup = document.createElement("div")
+    let lastNameLabel = document.createElement("label");
+    let lastNameForm = document.createElement("input");
+    let lastNameFormBar = document.createElement("span");
+
+    lastNameFormGroup.classList.add("formGroup");
+    lastNameForm.classList.add("feedbackFormField");
+    lastNameForm.setAttribute("required", "");
+    lastNameForm.setAttribute("id", "feedbackSenderLastName");
+
+    lastNameLabel.classList.add("feedbackFormLabel");
+    lastNameLabel.setAttribute("for", "feedbackSenderLastName");
+    lastNameLabel.textContent = "Last Name";
+
+    lastNameFormBar.classList.add("formBar");
+    lastNameFormGroup.appendChild(lastNameForm);
+    lastNameFormGroup.appendChild(lastNameLabel);
+    lastNameFormGroup.appendChild(lastNameFormBar);
+
+    let feedbackTextFormGroup = document.createElement("div");
+    let feedbackTextLabel = document.createElement("label");
+    let feedbackText = document.createElement("textarea");
+    let feedbackFormBar = document.createElement("span");
+
+    feedbackTextFormGroup.classList.add("formGroup");
+    feedbackText.classList.add("feedbackFormField");
+    feedbackText.setAttribute("id", "feedbackTextField");
+    feedbackText.setAttribute("cols", "40");
+    feedbackText.setAttribute("rows", "3");
+    feedbackText.setAttribute("required", "");
+
+    feedbackTextLabel.classList.add("feedbackFormLabel");
+    feedbackTextLabel.setAttribute("for", "feedbackTextField");
+    feedbackTextLabel.textContent = "Feedback";
+
+    feedbackFormBar.classList.add("formBar");
+    feedbackTextFormGroup.appendChild(feedbackText);
+    feedbackTextFormGroup.appendChild(feedbackTextLabel);
+    feedbackTextFormGroup.appendChild(feedbackFormBar)
+
+    let feedbackSubmitBtn = document.createElement("button");
+    feedbackSubmitBtn.setAttribute("id", "feedbackSubmitBtn");
+    feedbackSubmitBtn.setAttribute("type", "button");
+    feedbackSubmitBtn.textContent = "Send Feedback";
+
+    feedbackForm.setAttribute("id", "feedbackSenderForm");
+    feedbackForm.appendChild(firstNameFormGroup);
+    feedbackForm.appendChild(lastNameFormGroup);
+    feedbackForm.appendChild(feedbackTextFormGroup);
+    feedbackForm.appendChild(feedbackSubmitBtn);
+
+    feedbackFormFrame.appendChild(feedbackForm);
+    feedbackFormWrapper.appendChild(feedbackFormFrame);
+    contactSection.appendChild(feedbackFormWrapper);
+
+    return contactSection;
+}
+
 const loadHomePage = function() {
     return [
         loadHeroSection(),
         loadScheduleSection(),
         loadPopularMenu(),
+        loadContactSection(),
     ];
 };
 

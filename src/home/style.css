@@ -119,3 +119,169 @@
 .popularMenuName {
    font-size: 1.3rem; 
 }
+
+#contactSection {
+    display: flex;
+    box-shadow: 0px -3px 12px -3px rgba(0, 0, 0, 0.20);
+}
+
+#contactInfoSection {
+    align-self: start;
+    width: 30%;
+    padding: 3rem 3rem 8rem 3rem;
+
+    color: #fff;
+    /* background-color: #616161; */
+    background: conic-gradient(
+        from -45deg at bottom,
+        transparent,
+        #616161 1deg 89deg,
+        transparent 90deg
+    ) 50% / 10% 100%;
+    font-size: 1.2rem;
+}
+
+#contactHeading {
+    font-size: 2rem;
+    margin-bottom: 2.8rem;
+}
+
+.contactAddress + .contactAddress {
+    margin-top: 2rem;
+}
+
+.contactLinks, .contactLinks:visited {
+    color: inherit;
+}
+
+#contactFeedbackSection {
+    flex: 1;
+
+    padding: 2rem;
+}
+
+#contactFeedbackSection fieldset {
+    max-width: 480px;
+    border: 1px solid #535353;
+    margin-left: 6%;
+    padding-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#feedbackFormHeading {
+    padding: 0.2rem 1rem;
+    margin-bottom: 3.5rem;
+
+    color: #fff;
+    background-color: #616161;
+    font-size: 1.5rem;
+    text-align: center;
+
+    box-shadow: 0px 3px 3px 1px rgb(0, 0, 0, 0.2);
+}
+
+#feedbackSenderForm {
+    max-width: fit-content;
+    padding-left: 10%;
+}
+
+.formGroup {
+    position: relative;
+    width: 100%;
+}
+
+.formGroup + .formGroup {
+    margin-top: 3rem;
+}
+
+.feedbackFormField, .feedbackFormLabel {
+    display: block;
+}
+
+input.feedbackFormField {
+    height: 1.9rem;
+}
+
+textarea.feedbackFormField {
+    resize: none;
+}
+
+.feedbackFormField {
+    border: none;
+    padding: 0.125rem 0.0625rem 0.125rem;
+}
+
+.feedbackFormLabel {
+    position: absolute; 
+    top: 0.25rem;
+
+    color: #808080;
+    pointer-events: none;
+    transition: all 0.28s ease;
+}
+
+.formBar {
+    position: relative;
+    display: block;
+    border-bottom: 0.0625rem solid #808080;
+    transition: all 0.28s ease;
+}
+
+.formBar::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 0.0625rem;
+    background-color: #000;
+
+    transition: all 0.28s ease;
+}
+
+.feedbackFormField, .formBar {
+    width: 85%;
+}
+
+.feedbackFormField:focus {
+    outline: none;
+}
+
+.feedbackFormField:focus ~ .feedbackFormLabel,
+.feedbackFormField:valid ~ .feedbackFormLabel {
+    top: -1rem;
+    color: #000;
+}
+
+.feedbackFormField:focus ~ .formBar {
+    border-bottom: none;
+}
+
+.feedbackFormField:focus ~ .formBar::before {
+    left: 0;
+    width: 100%;
+}
+
+#feedbackSubmitBtn {
+    appearance: none;
+    border: none; 
+    border-radius: 1.5rem;
+    padding: 0.6rem 1rem;
+    margin: 3rem 0 0.8rem 25%;
+
+    font-size: 1rem;
+    font-style: inherit;
+    color: #fff;
+    background-color: #616161;
+
+    cursor: pointer;
+}
+
+#feedbackSubmitBtn:hover {
+    color: #616161;
+    background-color: #aeaeae;
+}
