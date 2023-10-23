@@ -145,7 +145,7 @@
     background: conic-gradient(
         from -45deg at bottom,
         transparent,
-        #616161 1deg 89deg,
+        #515151 1deg 89deg,
         transparent 90deg
     ) 50% / 10% 100%;
     font-size: 1.2rem;
@@ -186,7 +186,7 @@
     margin-bottom: 3.5rem;
 
     color: #fff;
-    background-color: #616161;
+    background-color: #515151;
     font-size: 1.5rem;
     text-align: center;
 
@@ -286,13 +286,13 @@ textarea.feedbackFormField {
     font-size: 1rem;
     font-style: inherit;
     color: #fff;
-    background-color: #616161;
+    background-color: #515151;
 
     cursor: pointer;
 }
 
 #feedbackSubmitBtn:hover {
-    color: #616161;
+    color: #515151;
     background-color: #aeaeae;
 }
 
@@ -305,5 +305,5 @@ textarea.feedbackFormField {
     padding: 1.5rem 0;
 
     color: #fff;
-    background-color: #616161;
+    background-color: #515151;
 }
