@@ -305,12 +305,24 @@ const loadContactSection = function() {
     return contactSection;
 }
 
+const loadFooterSection = function() {
+    let footerSection = document.createElement("footer");
+    let footerSectionText = document.createElement("span");
+
+    footerSection.setAttribute("id", "footerSection");
+    footerSectionText.textContent = "Copyright © Golden Lion Restaurant"
+    footerSection.appendChild(footerSectionText);
+
+    return footerSection;
+}
+
 const loadHomePage = function() {
     return [
         loadHeroSection(),
         loadScheduleSection(),
         loadPopularMenu(),
         loadContactSection(),
+        loadFooterSection(),
     ];
 };
 

@@ -285,3 +285,15 @@ textarea.feedbackFormField {
     color: #616161;
     background-color: #aeaeae;
 }
+
+#footerSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+
+    color: #fff;
+    background-color: #616161;
+}
