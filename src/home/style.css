@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Cadillac;
+    src: url("./CadillacPersonalUseItalic-K7pny.ttf") format("truetype");
+}
+
 #homePage {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -15,6 +20,11 @@
 
 #heroHeading {
     margin: 0 0.5rem;
+    
+    color: #232b2f;
+    font-family: Cadillac;
+    font-weight: 100;
+    margin-right: 1.8rem;
 }
 
 .heroHeadingIcon {
