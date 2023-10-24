@@ -1,7 +1,7 @@
 import "./style.css";
 import loadHomePage from "./home/home.js";
 import loadMenuPage from "./food-menu/menu.js";
-import loadContactPage from "./contact/contact.js";
+import loadCreditPage from "./credits/credit.js";
 
 let mainPage = document.getElementById("content");
 let navTabs = Array.from(document.getElementsByClassName("navItem"));
@@ -27,7 +27,7 @@ function switchTab(tabToSwitch) {
     } else if(tabToSwitch.textContent === "Food Menu") {
         pageContent = loadMenuPage();
     } else {
-        pageContent = loadContactPage();
+        pageContent = loadCreditPage();
     }
 
     updateMainPage(pageContent);
