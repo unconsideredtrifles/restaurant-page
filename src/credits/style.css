@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Cadillac;
+    src: url("../CadillacPersonalUseItalic-K7pny.ttf") format("truetype");
+}
+
+#creditPageSection {
+    margin-top: 4rem;
+}
+
+#creditPageBanner {
+    display: flex;
+    justify-content: center;
+}
+
+#creditPageBannerText {
+    border: 8px dashed #515151;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+
+    color: #515151;
+    font-size: 3.5rem;
+    font-family: Cadillac;
+    font-weight: 100;
+}
+
+#allCredits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    width: 60%;
+
+    border: 12px ridge#e6dcdc;
+    padding: 3rem 0;
+    margin: 2rem auto;
+
+    color: #fff;
+    background-color: #515151;
+}
+
+.creditedLink {
+    color: #fff;
+}
+
+.creditedLink:visited {
+    color: #fff;
+}
